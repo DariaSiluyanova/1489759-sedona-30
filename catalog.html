@@ -20,24 +20,25 @@
     </header>
 
     <main>      
-      <h1>Каталог гостиниц</h1> 
-      <section>
-        <h2>Фильтр гостиниц</h2>
-        <form method="POST" action="https://echo.htmlacademy.ru">
+      <h1>Каталог гостиниц</h1>        
+      <form method="POST" action="https://echo.htmlacademy.ru">
+
+        <section>
+          <h2>Фильтр гостиниц</h2>            
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="Pool" id="Choose-pool" checked>
-                <label for="Choose-pool">Бассейн</label>                
+                <input type="checkbox" name="pool" id="choosePool" checked>
+                <label for="choosePool">Бассейн</label>                
               </li>
               <li>
-                <input type="checkbox" name="Parking">
-                <label>Парковка</label>
+                <input type="checkbox" name="parking" id="chooseParking">
+                <label for="chooseParking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" name="Wi-fi">
-                <label>Wi-fi</label>
+                <input type="checkbox" name="wi_fi" id="chooseWiFi">
+                <label for="chooseWiFi">Wi-fi</label>
               </li>
             </ul>
           </fieldset>
@@ -45,16 +46,16 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="Hotel" id="stay-in-hotel" checked>
-                <label for="stay-in-hotel">Гостиница</label>
+                <input type="checkbox" name="hotel" id="stayInHotel" checked>
+                <label for="stayInHotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" name="Motel" id="stay-in-motel" checked>
-                <label for="stay-in-motel">Мотель</label>
+                <input type="checkbox" name="motel" id="stayInMotel" checked>
+                <label for="stayInMotel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" name="Apartment" id="stay-in-apartment" checked>
-                <label for="stay-in-apartment">Апартаменты</label>
+                <input type="checkbox" name="apartment" id="stayInApartment" checked>
+                <label for="stayInApartment">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -66,71 +67,69 @@
             </legend>
             <input type="range" min="0" max="3000" value="2500">
           </fieldset>
-          <button type="submit">Показать</button>          
-        </form>
-      </section>
+          <button type="submit">Показать</button>
+        </section> 
 
-      <section>
-        <h2>Результаты поиска</h2>
-        <div>Найдено:3</div>
-        <h3>Сортировка:</h3>
-        <form method="post" action="https://echo.htmlacademy.ru">
+        <section>
+          <h2>Результаты поиска</h2>
+          <div>Найдено:3</div>
+          <div>Сортировка:</div>
+        </section>
+
+        <section>
+          <h2>Сортировка результатов</h2>
           <label>
-            <input type="radio" name="Sort" value="По цене" checked>По цене
+            <input type="radio" name="sort" value="price" checked>По цене
           </label>
           <label>
-            <input type="radio" name="Sort" value="По типу">По типу
+            <input type="radio" name="sort" value="type">По типу
           </label>
           <label>
-            <input type="radio" name="Sort" value="По рейтингу">По рейтингу
+            <input type="radio" name="sort" value="rating">По рейтингу
           </label>
           <label>
-            <input type="radio" name="Order" value="up">
+            <input type="radio" name="order" value="up">
             <img src="https://via.placeholder.com/11x10" alt="Вверх">
           </label>
           <label>
-            <input type="radio" name="Order" value="down" checked>
+            <input type="radio" name="order" value="down" checked>
             <img src="https://via.placeholder.com/11x10" alt="Вниз">
           </label>
-        </form> 
+        </section>
+      </form> 
 
-          <article>
-            <h2>Amara Resort&SPA</h2>
-            <img src="https://via.placeholder.com/135x90" alt="Amara Resort&SPA">
-            <span>Гостиница</span>
-            <span>ОТ 4000 р</span>
-            <form action="https://echo.htmlacademy.ru">
-              <button type="submit">Подробнее</button>
-              <button type="submit">Забронировать</button>
-            </form>
-            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
-            <span>Рейтинг:8,5</span>
-          </article>
-          <article>
-            <h2>Desert quail inn</h2>
-            <img src="https://via.placeholder.com/135x90" alt="Desert quail inn">
-            <span>Мотель</span>
-            <span>ОТ 3000 р</span>
-            <form action="https://echo.htmlacademy.ru">
-              <button type="submit">Подробнее</button>
-              <button type="submit">Забронировать</button>
-            </form>
-            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
-            <span>Рейтинг:8,9</span>
-          </article>
-          <article>
-            <h2>Villas at poco diablo</h2>
-            <img src="https://via.placeholder.com/135x90" alt="Villas at poco diablo">
-            <span>Апартаменты</span>
-            <span>ОТ 2000 р</span>
-            <form action="https://echo.htmlacademy.ru">
-              <button type="submit">Подробнее</button>
-              <button type="submit">Забронировать</button>
-            </form>
-            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
-            <span>Рейтинг:9,2</span>
-          </article>
-      </section>
+      <article>
+        <h2>Amara Resort&#x26SPA</h2>
+        <img src="https://via.placeholder.com/135x90" alt="Amara Resort&SPA">
+        <span>Гостиница</span>
+        <span>ОТ 4000 р</span>
+        <span><a href="https://echo.htmlacademy.ru">Подробнее</a></span>
+        <span><a href="https://echo.htmlacademy.ru">Забронировать</a></span>
+        <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+        <span>Рейтинг:8,5</span>
+      </article> 
+
+      <article>
+        <h2>Desert quail inn</h2>
+        <img src="https://via.placeholder.com/135x90" alt="Desert quail inn">
+        <span>Мотель</span>
+        <span>ОТ 3000 р</span>            
+        <span><a href="https://echo.htmlacademy.ru">Подробнее</a></span>
+        <span><a href="https://echo.htmlacademy.ru">Забронировать</a></span>           
+        <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+        <span>Рейтинг:8,9</span>
+      </article>
+      
+      <article>
+        <h2>Villas at poco diablo</h2>
+        <img src="https://via.placeholder.com/135x90" alt="Villas at poco diablo">
+        <span>Апартаменты</span>
+        <span>ОТ 2000 р</span>            
+        <span><a href="https://echo.htmlacademy.ru">Подробнее</a></span>
+        <span><a href="https://echo.htmlacademy.ru">Забронировать</a></span>           
+        <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+        <span>Рейтинг:9,2</span>
+      </article>
     </main>
   
 

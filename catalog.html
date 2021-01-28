@@ -19,11 +19,142 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Выбор гостиницы</h1> 
+    <main>      
+      <h1>Каталог гостиниц</h1> 
       <section>
-        <h2>Фильтр гостиниц</h2>ы
+        <h2>Фильтр гостиниц</h2>
+        <form method="POST" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="Pool" id="Choose-pool" checked>
+                <label for="Choose-pool">Бассейн</label>                
+              </li>
+              <li>
+                <input type="checkbox" name="Parking">
+                <label>Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Wi-fi">
+                <label>Wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="Hotel" id="stay-in-hotel" checked>
+                <label for="stay-in-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Motel" id="stay-in-motel" checked>
+                <label for="stay-in-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Apartment" id="stay-in-apartment" checked>
+                <label for="stay-in-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <span>Стоимость в сутки(P):</span>
+              <span>от 0</span>
+              <span>до 3000</span>
+            </legend>
+            <input type="range" min="0" max="3000" value="2500">
+          </fieldset>
+          <button type="submit">Показать</button>          
+        </form>
+      </section>
+
+      <section>
+        <h2>Результаты поиска</h2>
+        <div>Найдено:3</div>
+        <h3>Сортировка:</h3>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <label>
+            <input type="radio" name="Sort" value="По цене" checked>По цене
+          </label>
+          <label>
+            <input type="radio" name="Sort" value="По типу">По типу
+          </label>
+          <label>
+            <input type="radio" name="Sort" value="По рейтингу">По рейтингу
+          </label>
+          <label>
+            <input type="radio" name="Order" value="up">
+            <img src="https://via.placeholder.com/11x10" alt="Вверх">
+          </label>
+          <label>
+            <input type="radio" name="Order" value="down" checked>
+            <img src="https://via.placeholder.com/11x10" alt="Вниз">
+          </label>
+        </form> 
+
+          <article>
+            <h2>Amara Resort&SPA</h2>
+            <img src="https://via.placeholder.com/135x90" alt="Amara Resort&SPA">
+            <span>Гостиница</span>
+            <span>ОТ 4000 р</span>
+            <form action="https://echo.htmlacademy.ru">
+              <button type="submit">Подробнее</button>
+              <button type="submit">Забронировать</button>
+            </form>
+            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+            <span>Рейтинг:8,5</span>
+          </article>
+          <article>
+            <h2>Desert quail inn</h2>
+            <img src="https://via.placeholder.com/135x90" alt="Desert quail inn">
+            <span>Мотель</span>
+            <span>ОТ 3000 р</span>
+            <form action="https://echo.htmlacademy.ru">
+              <button type="submit">Подробнее</button>
+              <button type="submit">Забронировать</button>
+            </form>
+            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+            <span>Рейтинг:8,9</span>
+          </article>
+          <article>
+            <h2>Villas at poco diablo</h2>
+            <img src="https://via.placeholder.com/135x90" alt="Villas at poco diablo">
+            <span>Апартаменты</span>
+            <span>ОТ 2000 р</span>
+            <form action="https://echo.htmlacademy.ru">
+              <button type="submit">Подробнее</button>
+              <button type="submit">Забронировать</button>
+            </form>
+            <img src="https://via.placeholder.com/19x17" alt="Количество звезд">
+            <span>Рейтинг:9,2</span>
+          </article>
       </section>
     </main>
+  
+
+    <footer>
+      <section>
+        <h2>Телефон</h2>
+        <p>#VISITSEDONA</p>
+        <a href="tel:+74956660166">+7(495)666-01-66</a>
+      </section>
+
+      <section>
+        <h2>Ссылки на соцсети</h2>
+        <ul>
+          <li><a href="blank.html"><img src="https://via.placeholder.com/17x17" alt="Иконка твиттера"></a></li>
+          <li><a href="blank.html"><img src="https://via.placeholder.com/12x12" alt="Иконка фейсбука"></a></li>
+          <li><a href="blank.html"><img src="https://via.placeholder.com/20x16" alt="Иконка ютуба"></a></li>
+        </ul>
+     </section>
+
+      <section>
+        <h2>Ссылка на Академию</h2>
+        <p>Website by</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x41" alt="Логотип Академии"></a>
+      </section>
+    </footer>
   </body>
 </html>

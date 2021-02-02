@@ -1,0 +1,190 @@
+/* Variables */
+
+  :root{
+    /*Цвета главной страницы*/
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-grey: #888888;
+    --basic-blue: #81B3D2;
+    --basic-dark-grey: #A9A9A9;
+    --basic-extra-dark-grey: #333333;
+    --basic-mud: #766357;
+    --basic-neutral-grey: #F2F2F2;
+    --basic-diff-gray: #EEEEEE;
+
+    /*Цвета в футере*/
+    --basic-dark: #231F20;
+    
+    /*Цвета второй страницы*/
+    --basic-granit: #ababab;
+    --basic-light-grey: #CACACA;
+    --basic-medium-grey: #666666;
+
+    /*Интерактив*/
+    --aiming-blue: #669EC0;
+    --push-blue: #5496BD;
+    --aiming-mud: #604E43;
+    --push-mud: #503E33;
+    --aiming-neutral-gray: #EBEBEB;
+    --push-neutral-gray: #E5E5E5;
+    --push-light-gray: #BDBBBC;
+}
+
+  body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--basic-extra-dark-grey);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--basic-white);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .main-navigation {
+    color: var(--basic-black);
+    background-color: transparent;
+  }
+
+  .site-navigation {
+    list-style: none;
+    color: var(--basic-black);
+    line-height: 26px;
+  }
+
+  .site-navigation a:hover {
+    color: var(--basic-blue);
+  }
+
+  .site-navigation a:focus {
+    color: var(--basic-black);
+  }
+
+  .site-navigation a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+  }
+
+  /* Приветствие */
+  .tagline{
+    line-height: 26px;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  /* Причины посещения */
+  .intro{
+    font: inherit;
+    line-height: 26px;
+  }
+  
+  .feature-list {
+    text-align: center;
+    font: inherit;
+  }
+
+  .from-3{
+    background-color: #EEEEEE;
+  }
+
+  .feature-item{
+    font-size: 21px;
+  }
+
+  .addition{
+    color: #ffffff;
+    background-color: #81B3D2;
+  }
+  
+  /* Заинтересовались? */
+  .appointment{
+    line-height: 24px;
+  }
+
+  .appointment-info{
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  /* Форма поиска гостиницы */
+  .popup{
+    font-weight: 700;
+    line-height: 26px;
+  }
+  
+  /* Подвал */
+  .main-footer{
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 21px;
+  }
+
+  /*Интерактивные кнопки*/
+  
+  .button{
+    background-color: #766357;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+  }
+
+  .button:hover{
+    background-color: #604E43;
+  }
+
+  .button:focus{
+    background-color: #503E33;
+  }
+  
+  /* Поля в попапе */
+  .form-field{
+    background-color: #F2F2F2;
+  }
+
+  .form-field:hover{
+    background-color: #EBEBEB;
+  }
+
+  .form-field:focus{
+    background-color: #ffffff;
+  }
+  
+  /* Кнопка найти в попапе и иконки соцсетей */
+  .search, .social-button{
+    background-color: #81B3D2;
+  }
+
+  .search:hover, .social-button:hover{
+    background-color: #669EC0;
+  }
+
+  .search:focus, .social-button:focus{
+    background-color: #5496BD;
+  }
+
+  

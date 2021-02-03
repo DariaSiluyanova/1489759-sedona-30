@@ -13,7 +13,7 @@
 
   /*Цвета в футере*/
   --basic-dark: #231f20;
-  
+
   /*Цвета второй страницы*/
   --basic-granit: #ababab;
   --basic-light-grey: #cacaca;
@@ -39,7 +39,7 @@ body {
   padding: 0;
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans Narrow", Arial, sans-serif;  
+  font-family: "PT Sans Narrow", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
@@ -48,15 +48,18 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
 }
+
 a {
   font-weight: 700;
   color: var(--basic-black);
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -66,41 +69,55 @@ img {
   white-space: nowrap;
   width: 1px;
 }
+
+/*START Навигация */
 .main-navigation {
   color: var(--basic-black);
   background-color: transparent;
 }
+
 .site-navigation {
   line-height: 26px;
   color: var(--basic-black);
   list-style-type: none;
 }
-.site-navigation 
-a:hover {
+
+.site-navigation a:hover {
   color: var(--basic-blue);
 }
-.site-navigation 
-a:focus {
+
+.site-navigation a:focus {
   color: var(--basic-black);
 }
-.site-navigation 
-a:active {
+
+.site-navigation a:active {
   color: var(--basic-black);
   opacity: .3;
 }
+/*END Навигация */
 
-/* Приветствие */
+/*START Приветствие */
 .tagline {
   font-size: 21px;
-  line-height: 26px;  
+  line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
 }
+/*END Приветствие */
 
-/* Причины посещения */
+/*START Причины посещения */
 .intro {
   font: inherit;
   line-height: 26px;
+}
+
+.addition {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.addition .feature-item{
+  color: var(--basic-white);
 }
 
 .features-list {
@@ -108,87 +125,100 @@ a:active {
   text-align: center;
   list-style-type: none;
 }
+
 .from-3 {
   background-color: var(--basic-diff-gray);
 }
+
 .feature-item {
   font-size: 21px;
   color: var(--basic-black);
 }
-.addition {
-  color: var(--basic-white);
-  background-color: var(--basic-blue);
-}
+/* END Причины посещения */
 
-/* Заинтересовались? */
+/*START Заинтересовались? */
 .appointment {
   line-height: 24px;
 }
+
 .appointment-info {
   font-size: 30px;
   font-weight: 700;
   color: var(--basic-black);
 }
+/*END Заинтересовались? */
 
-/* Форма поиска гостиницы */
+/*START Форма поиска гостиницы */
 .popup {
   line-height: 26px;
   font-weight: 700;
 }
+/*END Форма поиска гостиницы */
 
-/* Подвал */
+/*START Подвал */
 .main-footer {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--basic-black);  
+  color: var(--basic-black);
 }
+
 .socials-list {
   list-style-type: none;
 }
+/*END Подвал */
 
-/*Интерактивные кнопки*/
+/*START Общий стиль кнопок*/
 .button {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  text-transform: uppercase;    
+  text-transform: uppercase;
   text-align: center;
   color: var(--basic-white);
   vertical-align: middle;
   background-color: var(--basic-mud);
-  border: none; 
+  border: none;
 }
+
 .button:hover {
   background-color: var(--aiming-mud);
 }
+
 .button:focus {
   color: var(--light-white);
   background-color: var(--push-mud);
 }
+/*END Общий стиль кнопок*/
 
-/* Поля в попапе */
+/*START Поля в попапе */
 .form-field {
   background-color: var(--basic-neutral-grey);
 }
+
 .form-field:hover {
   background-color: var(--aiming-neutral-gray);
 }
+
 .form-field:focus {
   background-color: var(--basic-white);
 }
+/*END Поля в попапе */
 
-/* Кнопка найти в попапе и иконки соцсетей */
-.search, 
+/*START Кнопка найти в попапе и иконки соцсетей */
+.search,
 .social-button {
   background-color: var(--basic-blue);
 }
-.search:hover, 
+
+.search:hover,
 .social-button:hover {
   background-color: var(--aiming-blue);
 }
-.search:focus, 
+
+.search:focus,
 .social-button:focus {
   color: var(--light-white);
   background-color: var(--push-blue);
-} 
+}
+/*END Кнопка найти в попапе и иконки соцсетей */

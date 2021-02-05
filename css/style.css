@@ -30,7 +30,7 @@
 
   /*Для прозрачных элементов*/
   --light-white: hsla(0, 100%, 100%, .3);
-
+  --light-black: hsla(0, 0%, 0%, .3);
 }
 
 body {
@@ -155,19 +155,6 @@ img {
 }
 /*END Форма поиска гостиницы */
 
-/*START Подвал */
-.main-footer {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: var(--basic-black);
-}
-
-.socials-list {
-  list-style-type: none;
-}
-/*END Подвал */
-
 /*START Общий стиль кнопок*/
 .button {
   font-size: 21px;
@@ -222,3 +209,123 @@ img {
   background-color: var(--push-blue);
 }
 /*END Кнопка найти в попапе и иконки соцсетей */
+
+/* Внутренняя страница */
+/* START Фильтр */
+.list{
+  list-style-type: none;
+}
+
+.title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter{
+  color: var(--basic-white);
+  background-image: url("../img/bg-inner-page.jpg");
+}
+
+.button-show{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  background-color: inherit;
+  border: 1px solid var(--basic-white);
+}
+
+.button-show:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+/* END Фильтр */
+
+/* START Навигационная цепочка */
+.hotels {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.breadcrumbs {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--light-black);
+}
+
+.breadcrumbs-title {
+  color: var(--basic-black);
+}
+
+.breadcrumbs-item {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: all 0.1s;
+}
+
+/* Никак не могу заставить заработать*/
+.breadcrumbs-item + .input:checked{
+  text-decoration-line: none;
+  color: var(--basic-blue);
+}
+/* END Никак не могу заставить заработать */
+
+.breadcrumbs-item:hover,
+.tiny-sort:hover {
+  color: var(--basic-blue);
+}
+
+.breadcrumbs-item:active,
+.tiny-sort:active {
+  color: var(--basic-black);
+}
+
+/* END Навигационная цепочка */
+
+/* START Каталог */
+.more {
+  font: inherit;
+}
+
+.info-hotels {
+  color: var(--basic-extra-dark-grey);
+}
+
+.raiting{
+  color: var(--basic-medium-grey);
+}
+/* END Каталог */
+
+/*START Подвал */
+.main-footer {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.socials-list {
+  list-style-type: none;
+}
+
+.copy-info {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.copy-link .svg:hover {
+  fill: var(--basic-blue);
+}
+
+.copy-link .svg:active {
+  fill: var(--push-light-gray);
+}
+/*END Подвал */
+

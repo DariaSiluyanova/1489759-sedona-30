@@ -116,7 +116,7 @@ img {
   background-color: var(--basic-blue);
 }
 
-.addition .feature-item{
+.addition .feature-item {
   color: var(--basic-white);
 }
 
@@ -190,7 +190,32 @@ img {
 .form-field:focus {
   background-color: var(--basic-white);
 }
+
 /*END Поля в попапе */
+
+/*START Popup dates*/
+input[type="date"]::before {
+  content: attr(placeholder);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-text {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit-year-field,
+input[type="date"]:focus::-webkit-datetime-edit-month-field,
+input[type="date"]:focus::-webkit-datetime-edit-day-field,
+input[type="date"]:focus::-webkit-datetime-edit-text {
+  color: var(--basic-black);
+  content: none;
+}
+/*END Popup dates*/
 
 /*START Кнопка найти в попапе и иконки соцсетей */
 .search,
@@ -212,21 +237,21 @@ img {
 
 /* Внутренняя страница */
 /* START Фильтр */
-.list{
+.list {
   list-style-type: none;
 }
 
-.title{
+.title {
   font-size: 16px;
   font-weight: bold;
 }
 
-.filter{
+.filter {
   color: var(--basic-white);
   background-image: url("../img/bg-inner-page.jpg");
 }
 
-.button-show{
+.button-show {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -270,13 +295,6 @@ img {
   transition: all 0.1s;
 }
 
-/* Никак не могу заставить заработать*/
-.breadcrumbs-item + .input:checked{
-  text-decoration-line: none;
-  color: var(--basic-blue);
-}
-/* END Никак не могу заставить заработать */
-
 .breadcrumbs-item:hover,
 .tiny-sort:hover {
   color: var(--basic-blue);
@@ -287,6 +305,10 @@ img {
   color: var(--basic-black);
 }
 
+.input[type=radio]:checked + .breadcrumbs-item {
+  text-decoration: none;
+  color: var(--basic-blue);
+}
 /* END Навигационная цепочка */
 
 /* START Каталог */
@@ -327,5 +349,16 @@ img {
 .copy-link .svg:active {
   fill: var(--push-light-gray);
 }
+
+.soc-icon {
+  display: block;
+  box-sizing: border-box;
+  width: 46px;
+  height: 48px;
+  margin: 10px;
+  padding: 12px;
+  background-color: var(--basic-blue);
+}
 /*END Подвал */
+
 

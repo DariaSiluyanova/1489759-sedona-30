@@ -34,7 +34,7 @@
 }
 
 body {
-  min-width: 960px;
+  max-width: 1200px;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -50,7 +50,7 @@ body {
 }
 
 a {
-  font-weight: 700;
+  font-weight: bold;
   color: var(--basic-black);
   text-decoration: none;
 }
@@ -59,6 +59,33 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*START Гриды */
+.page {
+  height: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-body {
+  display: grid;
+  min-height: 100%;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 55px auto 120px;
+  grid-template-columns: repeat (6, 200px);
+}
+
+.main-header {
+}
+
+.content {
+  grid-area: main;
+}
+
+/*END Гриды */
 
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -74,12 +101,31 @@ img {
 .main-navigation {
   color: var(--basic-black);
   background-color: transparent;
+  grid-area: header;
+  height: auto;
+  text-align: left;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  margin-top: 0px;
+}
+
+.nav-item {
+  width: auto;
+  margin-top: 0px;
+}
+
+.main-header-logo {
+  justify-self: center;
 }
 
 .site-navigation {
   line-height: 26px;
   color: var(--basic-black);
   list-style-type: none;
+
+}
+
+.nav-item {
+  grid-column: repeat (5, 200px);
 }
 
 .site-navigation a:hover {
@@ -97,6 +143,10 @@ img {
 /*END Навигация */
 
 /*START Приветствие */
+.welcome {
+  margin-top: 200px;
+}
+
 .tagline {
   font-size: 21px;
   line-height: 26px;
@@ -327,10 +377,14 @@ input[type="date"]:focus::-webkit-datetime-edit-text {
 
 /*START Подвал */
 .main-footer {
+  grid-area: footer;
+  height: min-content;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
 }
 
 .socials-list {

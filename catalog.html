@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
   <head>
     <meta charset="utf-8">
@@ -13,29 +13,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
   </head>
 
-  <body class="page-body">
+  <body class="page-body container">
 
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html"><img src ="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
         <ul class="site-navigation">
-          <li><a href="blank.html">информация</a></li>
-          <li><a href="blank.html">фото и видео</a></li>
-          <li><a href="blank.html">карта штата</a></li>
-          <li><a href="catalog.html">гостиницы</a></li>
+          <li class="nav-item"><a href="blank.html">информация</a></li>
+          <li class="nav-item"><a href="blank.html">фото и видео</a></li>
+          <li class="nav-item"><a href="blank.html">карта штата</a></li>
+          <li class="nav-item"><a href="catalog.html">гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container inner-page">
+    <main class="content container inner-page">
       <h1 class="visually-hidden">Каталог гостиниц</h1>
       <form method="POST" action="https://echo.htmlacademy.ru">
 
         <section class="filter">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <fieldset class="filter-field">
-            <legend class="title">Инфраструктура:</legend>
-            <ul class="list">
+            <legend><div class="title">Инфраструктура:</div></legend>
+            <ul class="list infrastructure">
               <li class="list-item">
                 <input type="checkbox" name="pool" id="choosePool" checked>
                 <label for="choosePool">Бассейн</label>
@@ -50,9 +50,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-field">
-            <legend class="title">Тип жилья:</legend>
-            <ul class="list">
+          <fieldset class="filter-field-1">
+            <legend><div class="title">Тип жилья:</div></legend>
+            <ul class="list type-of-home">
               <li class="list-item">
                 <input type="checkbox" name="hotel" id="stayInHotel" checked>
                 <label for="stayInHotel">Гостиница</label>
@@ -68,12 +68,14 @@
             </ul>
           </fieldset>
           <fieldset class="filter-field">
-            <legend>
-              <span class="title">Стоимость в сутки(P):</span>
-              <span class="cost">от 0</span>
-              <span class="cost">до 3000</span>
+            <legend> 
+              <div class="filter-field-cost">
+                <div class="title cost-in-day">Стоимость в сутки(P):</div>
+                <div class="cost">от 0</div>
+                <div class="cost">до 3000</div>
+              </div>
             </legend>
-            <input type="range" min="0" max="3000" value="2500">
+            <div class="range-control"><input type="range" min="0" max="3000" value="2500"></div>
           </fieldset>
           <button class="button-show" type="submit">Показать</button>
         </section>
@@ -143,7 +145,7 @@
     </main>
 
 
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <section class="contacts-phone">
         <h2 class="visually-hidden">Телефон</h2>
         <p class="hashtag">#VISITSEDONA</p>

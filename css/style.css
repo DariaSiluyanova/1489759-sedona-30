@@ -93,6 +93,7 @@ img {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+  margin: 0px;
 }
 
 /*START Навигация */
@@ -321,6 +322,11 @@ img {
   color: var(--basic-black);
 }
 
+.label {
+  display: block;
+  text-align: left;
+}
+
 /*END Заинтересовались? */
 
 /*START Форма поиска гостиницы */
@@ -329,22 +335,26 @@ img {
   font-weight: 700;
 }
 
-.appointment-form {
+.form {
   display: grid;
-  grid-template-columns: repeat(3, 167px) 1fr;
-  grid-template-rows: 107px 67px 110px 54px 1fr;
+  grid-template-columns: repeat(4, 1fr);
   width: 568px;
-  height: 395px;
+  align-items: center;
   background-color: var(--basic-light-grey);
+  padding: 55px;
+  box-sizing: border-box;
 }
-/*END Форма поиска гостиницы */
+
+.form-input {
+  grid-column: 2/5;
+}
 
 /*START Общий стиль кнопок*/
 .button {
   display: block;
   width: 100%;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 26px;  
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -369,23 +379,6 @@ img {
   margin-bottom: 0px;
 }
 
-input[type=date] {
-  display: block;
-  grid-column: 2/4;
-  grid-row: 1/2;
-  width: 346px;
-  height: 38px;  
-  box-sizing: border-box;
-}
-
-input[type=number] {
-  display: block;
-  width: 114px;
-  height: 38px;
-  box-sizing: border-box;
-  margin-top: 15px;
-}
-
 .button-main-page {
   min-height: 86px;
   width: 568px;
@@ -403,112 +396,18 @@ input[type=number] {
   background-color: var(--basic-white);
 }
 /* Дата заезда */
-.date-arrival-layout {
-  grid-row: 1/2;
-  text-align: left;
-  margin: 0px;
-  padding: 60px 0px 0px 54px;
-}
-
-.form-field-1 {
-  margin-top: 55px;
-}
 
 /* Icons-calendar */
-.form-field-1+.icon-calendar {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  padding: 0px;
-  text-align: right;
-  margin: 60px 0px 0px 0px;
-}
-
-.departure-date-input+.icon-calendar {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  padding: 0px;
-  text-align: right;
-  margin: 20px 0px 0px 0px;
-}
 
 /* Дата выезда */
-.date-departure-layout {
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-.date-departure-layout label {
-  display: inline-block;
-  margin: 20px 0px 0px 40px;
-}
-.departure-date-input {
-  display: block;
-  grid-column: 2/4;
-  grid-row: 2/3;
-  margin-top: 15px;
-}
 
 /* Взрослые */
-.form-adult-layout {
-  grid-column: 1/2;
-  grid-row: 3/4;
-  text-align: bottom;
-  margin: 20px 0px 0px 25px; 
-}
-
-.input-adult-layout {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  margin-bottom: 0px;
-}
 
 /* Плюс и минус в полях */
-.input-adult-layout+.icon-minus {
-  grid-row: 3/4;
-  grid-column: 2/3;
-  text-align: left;
-  margin: 16px 0px 0px 10px;
-}
-
-.input-adult-layout+.icon-minus+.icon-plus {
-  grid-row: 3/4;
-  grid-column: 2/3;
-  text-align: right;
-  margin: 20px 65px 0px 0px;
-}
 
 /* Дети */
-.form-child-layout {
-  grid-column: 3/4;
-  grid-row: 3/4;
-  text-align: left;
-  margin: 0px;
-  padding-top: 20px;
-}
-
-.input-child-layout {
-  grid-column: 3/4;
-  grid-row: 3/4;
-}
 
 /* Плюс и минус в полях */
-.input-child-layout input[type=number] {
-  margin-left: 65px;
-}
-
-.input-child-layout+.icon-minus {
-  grid-row: 3/4;
-  grid-column: 3/4;
-  text-align: left;
-  margin: 16px 0px 0px 75px;
-}
-
-.input-child-layout+.icon-minus+.icon-plus {
-  grid-row: 3/4;
-  grid-column: 3/4;
-  text-align: right;
-  margin-top: 20px;
-}
 
 /* Кнопка Найти */
 .search-layout {
@@ -526,7 +425,6 @@ input[type=number] {
 input[type="date"]::before {
   content: attr(placeholder);
   font-size: 14px;
-  line-height: 26px;
   font-weight: bold;
 }
 
@@ -554,6 +452,7 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin:0;}
 /*END Popup dates*/
+/*END Форма поиска гостиницы */
 
 /*START Кнопка найти в попапе и иконки соцсетей */
 .search,
@@ -571,9 +470,10 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--light-white);
   background-color: var(--push-blue);
 }
+
 /*END Кнопка найти в попапе и иконки соцсетей */
 
-/* Внутренняя страница */
+/* ВНУТРЕННЯЯ СТРАНИЦА */
 /* START Фильтр */
 .inner-page {
   text-align: left;
@@ -582,13 +482,18 @@ input[type=number]::-webkit-outer-spin-button {
 .filter-field,
 .filter-field-1 {
   border: none;
+  margin: 0px;
 }
 
 .filter {
   display: grid;
-  grid-template-columns: 25% 25% 220px 1fr;
+  grid-template-columns: 25% 25% 1fr 463px;
   color: var(--basic-white);
-  background: no-repeat url("../img/bg-inner-page.jpg") center/100%;
+  background: no-repeat url("../img/bg-inner-page.jpg") 100%;
+}
+
+.filter-field-1+.filter-field {
+  grid-column: 4/5;
 }
 
 .filter-field .title {
@@ -619,27 +524,61 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-.filter-field-cost {
+.filter-field-1+.filter-field {
+  grid-column: 4/5;
+  margin: 0 auto;
+}
+
+.filter-inner-grid {
   display: grid;
-  grid-template-columns: 158px 158px;
-  grid-template-rows: 38px 34px;
-  margin-top: 20px;
-  margin-left: 198px;
+  grid-template-rows: 34px 34px 75px 80px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.filter-field-cost .cost-in-day {
-  grid-column: 1/3;
+.cost-in-day {
   grid-row: 1/2;
-  margin-top: 5px;
-  margin-left: 0px;
+  text-align: start;
+  padding: 20px 0px 0px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
 }
 
-.filter-field-cost .cost {
-  text-align: center;
-  padding-top: 5px;
+.range-inf {
+  grid-row: 2/3;
+  width: 317px;
+  height: 36px;
+  margin-top: 20px;
+  border: 2px solid var(--basic-white);
+}
+
+.range-grid {
+  display: grid;
+  grid-column: 1fr 1fr;
+  box-sizing: border-box;
+}
+
+.from-0 {
+  grid-column: 1/2;
+  padding: 5px 50px 5px;
+}
+
+.to-3000 {
+  grid-column: 2/3;
+  padding: 5px 50px 5px;
+}
+
+.range-control {
+  grid-row: 3/4;
+  padding-top: 35px;
 }
 
 .button-show {
+  grid-row: 4/5;
+  width: 137px;
+  height: 36px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -655,6 +594,9 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: var(--basic-white);
 }
 /* END Фильтр */
+
+/* START Найдено: 3 и сортировка */
+/* END Найдено: 3 и сортировка*/
 
 /* START Навигационная цепочка */
 .hotels {
@@ -709,6 +651,83 @@ input[type=number]::-webkit-outer-spin-button {
 
 .raiting{
   color: var(--basic-medium-grey);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 209px 919px;
+}
+
+.catalog-img {
+  grid-column: 1/2;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.card-hotel {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 116px 171px 1fr;
+  height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.hotels {
+  grid-column: 1/3;
+}
+
+.info-hotels {
+  grid-column: 1/2;
+}
+
+.but-layout {
+  grid-column: 1/2;
+  width: 110px;
+  height: 27px;
+}
+
+.but-book-layout {
+  grid-column: 2/3;
+  width: 142px;
+  height: 27px;
+}
+
+.raiting {
+  grid-column-start: 3;
+  grid-row: 3/4;
+  justify-self: end;
+  width: fit-content;
+  height: fit-content;
+  padding: 3px;
+  background-color: var(--basic-neutral-grey);
+}
+
+.stars {
+  grid-column-start: 3;
+  grid-row: 1/2;
+  justify-self: end;
+  height: 20px;
+  margin: 20px 0px 0px 0px;
+}
+
+.Amara {
+  padding-top: 20px;
+}
+
+.raiting-amara {
+  background: repeat-x url("../img/icon-star.svg");
+  width: 75px;
+}
+
+.raiting-desert {
+  background: repeat-x url("../img/icon-star.svg");
+  width: 55px;
+}
+
+.raiting-villas {
+  background: repeat-x url("../img/icon-star.svg");
+  width: 37px;
 }
 /* END Каталог */
 

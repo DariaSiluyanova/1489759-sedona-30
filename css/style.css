@@ -490,91 +490,75 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .filter {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  padding: 30px 72px;
   color: var(--basic-white);
   background: no-repeat url("../img/bg-inner-page.jpg") 100%;
 }
 
 .filter-field {
-  border: none;
-  margin: 0px;
+  width: 300px;
   padding: 0px;
+  margin: 0px;
+  border: none;  
+  box-sizing: border-box;
+}
+
+.filter-box-cost {
+  margin-left: auto;
   box-sizing: border-box;
 }
 
 .list {
-  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.list-item {
+  padding-bottom: 25px;
+}
+
+.list-item:last-child {
+  padding-bottom: 0px;
 }
 
 .title {
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
-.list-infrastructure {
-  display: grid;
-  grid-row: repeat(3, 1fr);
+.cost-table {
+  display: flex;
+  border: 2px solid var(--basic-white);
+  margin-bottom: 20px;
 }
 
-.filter-inner-grid {
-  display: grid;
-  grid-template-rows: 34px 34px 75px 80px;
-  padding: 0px;
+.cost-item {
+  width: 100px;
+  align-self: center;
   margin: 0px;
+  padding: 7px 36px;
+  text-align: center;
 }
 
 .cost-in-day {
-  grid-row: 1/2;
-  text-align: start;
-  padding: 20px 0px 0px;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
 }
 
-.range-inf {
-  grid-row: 2/3;
-  width: 317px;
-  height: 36px;
-  margin-top: 20px;
-  border: 2px solid var(--basic-white);
-}
-
-.range-grid {
-  display: grid;
-  grid-column: 1fr 1fr;
-  box-sizing: border-box;
-}
-
-.from-0 {
-  grid-column: 1/2;
-  padding: 5px 50px 5px;
-}
-
-.to-3000 {
-  grid-column: 2/3;
-  padding: 5px 50px 5px;
-}
-
-.range-control {
-  grid-row: 3/4;
-  padding-top: 35px;
-}
-
 .button-show {
-  grid-row: 4/5;
-  width: 137px;
-  height: 36px;
   margin: 0 auto;
+  padding: 7px 36px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
   color: var(--basic-white);
   background-color: inherit;
-  border: 1px solid var(--basic-white);
+  border: 2px solid var(--basic-white);
 }
 
 .button-show:hover {
@@ -584,6 +568,13 @@ input[type=number]::-webkit-outer-spin-button {
 /* END Фильтр */
 
 /* START Найдено: 3 и сортировка */
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;  
+  margin-right: 30px;
+}
 /* END Найдено: 3 и сортировка*/
 
 /* START Навигационная цепочка */
@@ -593,10 +584,24 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 26px;
 }
 
+.flex-breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+
 .breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
   font-size: 12px;
   line-height: 18px;
   color: var(--light-black);
+}
+
+.arrows {
+  margin-left: auto;
 }
 
 .breadcrumbs-title {
@@ -644,11 +649,13 @@ input[type=number]::-webkit-outer-spin-button {
 .catalog {
   display: grid;
   grid-template-columns: 209px 919px;
+  border: 1px solid var(--basic-light-grey);
 }
 
 .catalog-img {
   grid-column: 1/2;
   text-align: right;
+  padding: 0px;
   margin-top: 20px;
 }
 
@@ -700,7 +707,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .Amara {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .raiting-amara {
@@ -728,7 +735,20 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--basic-black);
 }
 
+.flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.footer-part {
+  width: 400px;
+}
+
 .socials-list {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -745,9 +765,13 @@ input[type=number]::-webkit-outer-spin-button {
   fill: var(--push-light-gray);
 }
 
+.copy-box {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .soc-icon {
-  display: block;
-  float: left;
   box-sizing: border-box;
   width: 46px;
   height: 48px;
@@ -755,37 +779,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 12px;
   background-color: var(--basic-blue);
 }
-
-/* START Grids */
-.main-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.contacts-phone {
-  margin-left: 110px;
-}
-
-.num-phone {
-  margin-left: 10px;
-}
-
-.socials {
-  padding-left: 90px;
-}
-
-.copy-info {
-  float: left;
-  padding-top: 30px;
-  padding-left: 0px;
-}
-
-.copy-link {
-  display: inline-block;
-  float: left;
-  padding: 30px 0px 0px 10px;
-}
-/* END Grids */
 /*END Подвал */
 
 

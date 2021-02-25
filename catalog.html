@@ -34,46 +34,57 @@
         <section class="filter">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <fieldset class="filter-field">
-            <legend class="title">Инфраструктура:</legend>
+            <title class="title">Инфраструктура:</title>
             <ul class="list infrastructure">
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="pool" id="choosePool" checked>
+                <input class="filter-item visually-hidden" type="checkbox" name="pool" id="choosePool" checked>
                 <label class="filter-label" for="choosePool">Бассейн</label>
               </li>
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="parking" id="chooseParking">
+                <input class="filter-item visually-hidden" type="checkbox" name="parking" id="chooseParking">
                 <label class="filter-label" for="chooseParking">Парковка</label>
               </li>
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="wi_fi" id="chooseWiFi">
+                <input class="filter-item visually-hidden" type="checkbox" name="wi_fi" id="chooseWiFi">
                 <label class="filter-label" for="chooseWiFi">Wi-fi</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-field">
-            <legend class="title">Тип жилья:</legend>
+            <title class="title">Тип жилья:</title>
             <ul class="list type-of-home">
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="hotel" id="stayInHotel" checked>
+                <input class="filter-item visually-hidden" type="checkbox" name="hotel" id="stayInHotel" checked>
                 <label class="filter-label" for="stayInHotel">Гостиница</label>
               </li>
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="motel" id="stayInMotel" checked>
+                <input class="filter-item visually-hidden" type="checkbox" name="motel" id="stayInMotel" checked>
                 <label class="filter-label" for="stayInMotel">Мотель</label>
               </li>
               <li class="list-item">
-                <input class="filter-item" type="checkbox" name="apartment" id="stayInApartment" checked>
+                <input class="filter-item visually-hidden" type="checkbox" name="apartment" id="stayInApartment" checked>
                 <label class="filter-label" for="stayInApartment">Апартаменты</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="filter-field filter-box-cost">
-            <legend class="title cost-in-day">Стоимость в сутки(P):</legend>
-            <div class="cost-table">
-              <p class="cost-item">от 0</p>
-              <p class="cost-item">до 3000</p>
+          </fieldset>         
+          <fieldset class="filter-field">
+            <title class="title">Стоимость в сутки(P):
+            </title>
+            <div class="price-controls">
+              <label class="cost-item">
+                <input class="filter-input" type="text" name="min-price" value="0">
+              </label>
+              <label class="cost-item">
+                <input class="filter-input" type="text" name="max-price" value="3000">
+              </label>
             </div>
-            <input class="range-control" type="range" min="0" max="3000" value="2500">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width: 83%; margin-left: 0%"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="left: 83%"></div>
+            </div>
             <button class="button-show" type="submit">Показать</button>
           </fieldset>
         </section>
@@ -88,24 +99,28 @@
           <section class="breadcrumbs">
             <h2 class="visually-hidden">Сортировка результатов</h2>
   
-            <input type="radio" name="sort" value="price" id="sort1" class="input" checked>
+            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="price" id="sort1" class="input" checked>
             <label for="sort1" class="breadcrumbs-item"> По цене </label>
   
-            <input type="radio" name="sort" value="type" id="sort2" class="input">
+            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="type" id="sort2" class="input">
             <label for="sort2" class="breadcrumbs-item"> По типу </label>
   
-            <input type="radio" name="sort" value="rating" id="sort3" class="input">
+            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="rating" id="sort3" class="input">
             <label for="sort3" class="breadcrumbs-item"> По рейтингу </label>
           </section>
 
           <section class="arrows">
             <label class="tiny-sort">
-              <input type="radio" name="order" value="up">
-              <img src="https://via.placeholder.com/11x10" alt="Вверх">
+              <input class="visually-hidden" type="radio" name="order" value="up">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>
             </label>
             <label class="tiny-sort">
-              <input type="radio" name="order" value="down" checked>
-              <img src="https://via.placeholder.com/11x10" alt="Вниз">
+              <input class="visually-hidden" type="radio" name="order" value="down" checked>
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" fill="#CACACA"/>
+              </svg>
             </label>
           </section>
         </div>
@@ -163,32 +178,26 @@
       <section class="footer-part">
         <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul class="socials-list">
-          <li>
-            <div class="soc-icon social-button">
-              <a href="blank.html">
-                <svg class="soc-svg" width="20" height="20" viewBox="0 0 17 17" fill="none" stroke="var(--basic-blue)" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
-                </svg>
-              </a>
-            </div>            
+          <li class="socials-list-item">
+            <a class="soc-icon social-button" href="blank.html">
+              <svg class="soc-svg" width="20" height="20" viewBox="0 0 17 17" fill="none" stroke="var(--basic-blue)" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-color" d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+              </svg>
+            </a>           
           </li>
-          <li>            
-            <div class="soc-icon social-button">
-              <a href="blank.html">
-                <svg class="soc-svg" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
-                </svg>
-              </a>
-            </div>        
+          <li class="socials-list-item">            
+            <a class="soc-icon social-button" href="blank.html">
+              <svg class="soc-svg" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-color" d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+              </svg>
+            </a>       
           </li>
-          <li>
-            <div class="soc-icon social-button">
-              <a href="blank.html">              
-                <svg class="soc-svg" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
-                </svg>
-              </a>  
-            </div>            
+          <li class="socials-list-item">
+            <a class="soc-icon social-button" href="blank.html">              
+              <svg class="soc-svg" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-color" fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+              </svg>
+            </a>          
           </li>
         </ul>
       </section>

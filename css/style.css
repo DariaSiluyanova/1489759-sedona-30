@@ -103,11 +103,12 @@ img {
   text-align: left;
   color: var(--basic-black);  
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 .site-navigation {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0px;
   padding: 0px;
   line-height: 26px;
@@ -123,29 +124,30 @@ img {
 }
 
 .nav-item {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0px;
 }
 
 /* Навигационная цепочка */
-.nav-item:nth-child(1) {
+ .nav-item:first-child {
   grid-column: 1/2;
-  text-align: center;  
+  text-align: left;
+  padding-left: 60px;
 }
 
 .nav-item:nth-child(2) {
   grid-column: 2/3;
-  text-align: right;  
+  text-align: left;  
 }
 
 .nav-item:nth-child(3) {
-  grid-column: 5/6; 
-  text-align: left;
+  grid-column: 3/4; 
+  text-align: right;
 }
 
-.nav-item:nth-child(4) {
-  grid-column: 6/7;
-  text-align: center;
+.nav-item:last-child {
+  grid-column: 4/5;
+  text-align: right;
+  padding-right: 60px;
 }
 
 /* Интерактив */
@@ -332,12 +334,12 @@ img {
 /*START Форма поиска гостиницы */
 .popup {
   line-height: 26px;
-  font-weight: 700;  
+  font-weight: 700;
 }
 
 .form {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 568px;
@@ -438,12 +440,11 @@ img {
 .form-field:focus {
   background-color: var(--basic-white);
 }
-
 /* Кнопка Найти */
 .search-layout {
   display: block;
   grid-column: 1/5;
-  grid-row: 4/5;
+  grid-row-start: 5;
   height: 58px;
   width: 456px;
   box-sizing: border-box;
@@ -481,7 +482,18 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: var(--push-blue);
 }
 
+.social-button:active .svg-color {
+  fill: var(--light-white);
+}
+
 /*END Кнопка найти в попапе и иконки соцсетей */
+
+/*START Карта */
+.map {
+  position: absolute;
+  z-index: 1;
+}
+/* END Карта */
 
 /* ВНУТРЕННЯЯ СТРАНИЦА */
 /* START Фильтр */
@@ -491,22 +503,31 @@ input[type=number]::-webkit-outer-spin-button {
 
 .filter {
   display: flex;
-  padding: 30px 72px;
+  padding: 0px;
+  margin: 0px;
   color: var(--basic-white);
   background: no-repeat url("../img/bg-inner-page.jpg") 100%;
 }
 
 .filter-field {
-  width: 300px;
   padding: 0px;
-  margin: 0px;
+  margin-left: 70px;
   border: none;  
   box-sizing: border-box;
 }
 
-.filter-box-cost {
+.filter-field:last-child {
+  width: 300px;
+  margin-right: 75px;
+  margin-bottom: 35px;
   margin-left: auto;
-  box-sizing: border-box;
+}
+
+.title {
+  display: block;
+  margin: 20px 0px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .list {
@@ -516,42 +537,98 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .list-item {
-  padding-bottom: 25px;
+  padding: 0px 0px 25px 40px;
 }
 
 .list-item:last-child {
   padding-bottom: 0px;
 }
 
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 25px;
+.filter-label {
+  padding-top: 5px;
 }
 
-.cost-table {
+/* Чекбоксы */
+.list-item .filter-label {
+  position: relative;
+  display: block;
+}
+
+.list-item .filter-item+.filter-label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -35px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 15%;
+}
+
+/* Стоимость в сутки */
+.filter-input {
+  display: block;
+  width: 100px;
+  text-align: center;
+  font-style: inherit;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+  height: 26px;
+  padding-top: 24px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--basic-grey);
+}
+
+.range-controls .bar {
+  width: 83%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  padding: 0px;
+  background-color: var(--basic-grey);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+}
+
+.range-controls .toggle-max {
+  left: 240px;
+}
+
+.price-controls {
   display: flex;
   border: 2px solid var(--basic-white);
-  margin-bottom: 20px;
 }
 
 .cost-item {
+  display: block;
   width: 100px;
   align-self: center;
   margin: 0px;
-  padding: 7px 36px;
-  text-align: center;
+  padding: 5px 25px;
 }
 
-.cost-in-day {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 21px;
-}
-
+/* Кнопка Показать */
 .button-show {
   margin: 0 auto;
   padding: 7px 36px;
+  transform: translate(50%, 0);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -589,13 +666,13 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px;
+  margin: 30px 75px;
 }
 
 .breadcrumbs {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 250px;
   font-size: 12px;
   line-height: 18px;
   color: var(--light-black);
@@ -628,7 +705,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--basic-black);
 }
 
-.input[type=radio]:checked + .breadcrumbs-item {
+.input-breadcrumbs:checked+.breadcrumbs-item {
   text-decoration: none;
   color: var(--basic-blue);
 }
@@ -736,32 +813,41 @@ input[type=number]::-webkit-outer-spin-button {
 
 .flexbox {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+.map-substrate {
+  width: 1199px;
+  height: 594px;
+  background-color: var(--basic-dark-grey);
 }
 
 .footer-part {
   width: 400px;
 }
 
+.hashtag {
+  margin: 15px;
+}
+
 .socials-list {
   display: flex;
-  width: fit-content;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 151px;
   padding: 0px;
+  margin: 0 auto;
   list-style-type: none;
 }
 
-.copy-info {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.copy-link .svg:hover {
-  fill: var(--basic-blue);
-}
-
-.copy-link .svg:active {
-  fill: var(--push-light-gray);
+.soc-icon {
+  display: block;
+  box-sizing: border-box;
+  width: 46px;
+  height: 48px;
+  padding: 12px;
+  background-color: var(--basic-blue);
 }
 
 .copy-box {
@@ -770,13 +856,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
 }
 
-.soc-icon {
-  box-sizing: border-box;
-  width: 46px;
-  height: 48px;
-  margin: 5px;
-  padding: 12px;
-  background-color: var(--basic-blue);
+.copy-info {
+  font-size: 14px;
+  line-height: 26px;
+  margin-right: 5px;
+}
+
+.copy-link .svg:hover {
+  fill: var(--basic-blue);
+}
+
+.copy-link .svg:active {
+  fill: var(--push-light-gray);
 }
 /*END Подвал */
 

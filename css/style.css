@@ -163,6 +163,10 @@ img {
   color: var(--basic-black);
   opacity: .3;
 }
+
+.site-navigation a:visited {
+  color: var(--basic-mud);
+}
 /*END Навигация */
 
 /*START Приветствие */
@@ -423,10 +427,11 @@ img {
 .form-field {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   padding: 8px 12px;
   background-color: var(--basic-neutral-grey);
-  box-sizing: border-box;
   font-size: 14px;
+  border: none;
 }
 
 .field-half {
@@ -439,6 +444,17 @@ img {
 
 .form-field:focus {
   background-color: var(--basic-white);
+  outline: none;
+}
+
+.form-input:hover .icon-popup,
+.form-input-half:hover .icon-popup {
+  fill: var(--basic-black);
+}
+
+.form-input:active .icon-popup,
+.form-input-half .icon-popup:active {
+  fill: var(--basic-blue);
 }
 /* Кнопка Найти */
 .search-layout {
@@ -566,6 +582,12 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 15%;
 }
 
+.list-item .filter-item:checked+.filter-label::before {
+  content: url(../img/icon-checked.svg);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
 /* Стоимость в сутки */
 .filter-input {
   display: block;
@@ -609,6 +631,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 .range-controls .toggle-max {
   left: 240px;
+}
+
+.range-controls .toggle-min:hover,
+.range-controls .toggle-min:active,
+.range-controls .toggle-max:hover,
+.range-controls .toggle-max:active {
+  width: 6px;
+  height: 6px;
+  left: -2px;
 }
 
 .price-controls {
@@ -708,6 +739,15 @@ input[type=number]::-webkit-outer-spin-button {
 .input-breadcrumbs:checked+.breadcrumbs-item {
   text-decoration: none;
   color: var(--basic-blue);
+}
+
+.tiny-sort .svg-sort:hover {
+  fill: var(--basic-black);
+}
+
+.input-sort:active+.svg-arrows .svg-sort,
+.input-sort:checked+.svg-arrows .svg-sort {
+  fill: var(--basic-blue);
 }
 /* END Навигационная цепочка */
 

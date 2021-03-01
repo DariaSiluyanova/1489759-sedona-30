@@ -128,7 +128,7 @@ img {
 }
 
 /* Навигационная цепочка */
- .nav-item:first-child {
+.nav-item:first-child {
   grid-column: 1/2;
   text-align: left;
   padding-left: 60px;
@@ -151,20 +151,20 @@ img {
 }
 
 /* Интерактив */
-.site-navigation a:hover {
+.site-navigation .nav-reference:hover {
   color: var(--basic-blue);
 }
 
-.site-navigation a:focus {
+.site-navigation .nav-reference:focus {
   color: var(--basic-black);
 }
 
-.site-navigation a:active {
+.site-navigation .nav-reference:active {
   color: var(--basic-black);
   opacity: .3;
 }
 
-.site-navigation a:visited {
+.nav-item .visited {
   color: var(--basic-mud);
 }
 /*END Навигация */
@@ -306,7 +306,8 @@ img {
 
 .from-3 .number {
   margin: 0px;  
-  padding: 23px 174px 25px;
+  padding-top: 23px;
+  padding-bottom: 25px;
 }
 
 .from-3 .feature-tagline {
@@ -326,6 +327,10 @@ img {
   font-size: 30px;
   font-weight: 700;
   color: var(--basic-black);
+}
+
+.appointment-instruction {
+  margin: 0px;
 }
 
 .label {
@@ -476,7 +481,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin:0;}
+  margin:0;
+}
 /*END Popup dates*/
 
 /*END Форма поиска гостиницы */
@@ -506,8 +512,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*START Карта */
 .map {
-  position: absolute;
-  z-index: 1;
 }
 /* END Карта */
 
@@ -571,22 +575,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .list-item .filter-item+.filter-label::before {
-  content: "";
+  content: url(../img/icon-checkbox.svg);
   position: absolute;
-  top: 0px;
-  left: -35px;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: 2px solid var(--basic-white);
-  border-radius: 15%;
+  top: 0;
+  left: -40px;
 }
 
 .list-item .filter-item:checked+.filter-label::before {
   content: url(../img/icon-checked.svg);
-  position: absolute;
-  width: 20px;
-  height: 20px;
+  top: 0px;
+  left: -40px;
+  padding: 2px 0px 0px 3px;
+  background: url(../img/icon-checkbox-checked.svg) no-repeat;
 }
 /* Стоимость в сутки */
 .filter-input {
@@ -619,7 +619,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .range-controls .toggle {
   position: absolute;
-  top: 14px;
+  top: 15px;
   left: 0px;
   width: 4px;
   height: 4px;
@@ -637,9 +637,8 @@ input[type=number]::-webkit-outer-spin-button {
 .range-controls .toggle-min:active,
 .range-controls .toggle-max:hover,
 .range-controls .toggle-max:active {
-  width: 6px;
-  height: 6px;
-  left: -2px;
+  transform: scale(1.2);
+  transition: 0.2s;
 }
 
 .price-controls {
@@ -827,18 +826,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .raiting-amara {
-  background: repeat-x url("../img/icon-star.svg");
-  width: 75px;
+  background: space url("../img/icon-star.svg");
+  width: 90px;
 }
 
 .raiting-desert {
-  background: repeat-x url("../img/icon-star.svg");
-  width: 55px;
+  background: space url("../img/icon-star.svg");
+  width: 65px;
 }
 
 .raiting-villas {
-  background: repeat-x url("../img/icon-star.svg");
-  width: 37px;
+  background: space url("../img/icon-star.svg");
+  width: 42px;
 }
 /* END Каталог */
 

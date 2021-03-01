@@ -19,10 +19,10 @@
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html"><img src ="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
         <ul class="site-navigation">
-          <li class="nav-item"><a href="blank.html">информация</a></li>
-          <li class="nav-item"><a href="blank.html">фото и видео</a></li>
-          <li class="nav-item"><a href="blank.html">карта штата</a></li>
-          <li class="nav-item"><a href="catalog.html">гостиницы</a></li>
+          <li class="nav-item"><a class="nav-reference" href="blank.html">информация</a></li>
+          <li class="nav-item"><a class="nav-reference" href="blank.html">фото и видео</a></li>
+          <li class="nav-item"><a class="nav-reference" href="blank.html">карта штата</a></li>
+          <li class="nav-item"><a class="nav-reference visited" href="catalog.html">гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -34,7 +34,7 @@
         <section class="filter">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <fieldset class="filter-field">
-            <title class="title">Инфраструктура:</title>
+            <div class="title">Инфраструктура:</div>
             <ul class="list infrastructure">
               <li class="list-item">
                 <input class="filter-item visually-hidden" type="checkbox" name="pool" id="choosePool" checked>
@@ -51,7 +51,7 @@
             </ul>
           </fieldset>
           <fieldset class="filter-field">
-            <title class="title">Тип жилья:</title>
+            <div class="title">Тип жилья:</div>
             <ul class="list type-of-home">
               <li class="list-item">
                 <input class="filter-item visually-hidden" type="checkbox" name="hotel" id="stayInHotel" checked>
@@ -68,14 +68,14 @@
             </ul>
           </fieldset>         
           <fieldset class="filter-field">
-            <title class="title">Стоимость в сутки(P):
-            </title>
+            <div class="title">Стоимость в сутки&thinsp;(P):
+            </div>
             <div class="price-controls">
               <label class="cost-item">
-                <input class="filter-input" type="text" name="min-price" value="0">
+                <input class="filter-input" type="text" name="min-price" value="ОТ 0">
               </label>
               <label class="cost-item">
-                <input class="filter-input" type="text" name="max-price" value="3000">
+                <input class="filter-input" type="text" name="max-price" value="ДО 3000">
               </label>
             </div>
             <div class="range-controls">
@@ -92,24 +92,25 @@
         <div class="flex-breadcrumbs">
           <section class="info">
             <h2 class="visually-hidden">Результаты поиска</h2>
-            <div class="hotels">Найдено:3</div>
+            <div class="hotels">Найдено:&thinsp;3</div>
             <div class="breadcrumbs-title">Сортировка:</div>
           </section>
   
           <section class="breadcrumbs">
             <h2 class="visually-hidden">Сортировка результатов</h2>
   
-            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="price" id="sort1" class="input" checked>
+            <input class="input-breadcrumbs visually-hidden input" type="radio" name="sort" value="price" id="sort1" checked>
             <label for="sort1" class="breadcrumbs-item"> По цене </label>
   
-            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="type" id="sort2" class="input">
+            <input class="input-breadcrumbs visually-hidden input" type="radio" name="sort" value="type" id="sort2">
             <label for="sort2" class="breadcrumbs-item"> По типу </label>
   
-            <input class="input-breadcrumbs visually-hidden" type="radio" name="sort" value="rating" id="sort3" class="input">
+            <input class="input-breadcrumbs visually-hidden input" type="radio" name="sort" value="rating" id="sort3">
             <label for="sort3" class="breadcrumbs-item"> По рейтингу </label>
           </section>
 
           <section class="arrows">
+            <h2 class="visually-hidden">Сортировка по возрастанию и убыванию</h2>
             <label class="tiny-sort">
               <input class="input-sort visually-hidden" type="radio" name="order" value="up">
               <svg class="svg-arrows" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +136,7 @@
             <a href="https://echo.htmlacademy.ru" class="button search more but-layout">Подробнее</a>
             <a href="https://echo.htmlacademy.ru" class="button more but-book-layout">Забронировать</a>
             <div class="stars raiting-amara"><h3 class="visually-hidden">4 звезды</h3></div>
-            <div class="raiting">Рейтинг:8,5</div>
+            <div class="raiting">Рейтинг:&thinsp;8,5</div>
           </div>
         </article>
   
@@ -148,7 +149,7 @@
             <a href="https://echo.htmlacademy.ru" class="button search more but-layout">Подробнее</a>
             <a href="https://echo.htmlacademy.ru" class="button more but-book-layout">Забронировать</a>
             <div class="stars raiting-desert"><h3 class="visually-hidden">3 звезды</h3></div>
-            <div class="raiting">Рейтинг:8,9</div>
+            <div class="raiting">Рейтинг:&thinsp;8,9</div>
           </div>
         </article>
   
@@ -161,7 +162,7 @@
             <a href="https://echo.htmlacademy.ru" class="button search more but-layout">Подробнее</a>
             <a href="https://echo.htmlacademy.ru" class="button more but-book-layout">Забронировать</a>
             <div class="stars raiting-villas"><h3 class="visually-hidden">2 звезды</h3></div>
-            <div class="raiting">Рейтинг:9,2</div>
+            <div class="raiting">Рейтинг:&thinsp;9,2</div>
           </div>
         </article>
       </div>

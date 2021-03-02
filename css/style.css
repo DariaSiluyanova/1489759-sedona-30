@@ -10,6 +10,8 @@
   --basic-mud: #766357;
   --basic-neutral-grey: #f2f2f2;
   --basic-diff-gray: #eeeeee;
+  --modal-shadow: rgba(0, 1, 1, 0.15);
+  --content-shadow: rgba(0, 1, 1, 0.2);
 
   /*Цвета в футере*/
   --basic-dark: #231f20;
@@ -73,6 +75,7 @@ img {
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
+  box-shadow: 0px 5px 15px var(--content-shadow);
 }
 
 .main-header {
@@ -128,10 +131,10 @@ img {
 }
 
 /* Навигационная цепочка */
-.nav-item:first-child {
+.nav-item:nth-child(4n+1) {
   grid-column: 1/2;
   text-align: left;
-  padding-left: 60px;
+  margin: 0 auto;
 }
 
 .nav-item:nth-child(2) {
@@ -144,10 +147,10 @@ img {
   text-align: right;
 }
 
-.nav-item:last-child {
+.nav-item:nth-child(4n) {
   grid-column: 4/5;
   text-align: right;
-  padding-right: 60px;
+  margin: 0 auto;
 }
 
 /* Интерактив */
@@ -278,9 +281,9 @@ img {
   height: 332px;
 }
 
-.feature-item-add {
-  padding: 0px;
+.feature-item-add {  
   margin-top: 160px;
+  padding: 0px;
 }
 
 .tagline-no-num {
@@ -351,13 +354,14 @@ img {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
   width: 568px;
   row-gap: 30px;
   margin: 0px 316px 0px;
-  align-items: center;
-  background-color: var(--basic-light-grey);
   padding: 55px;
   box-sizing: border-box;
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--modal-shadow);
 }
 
 .form-input {
@@ -406,9 +410,9 @@ img {
 
 .button-calendar {
   position: absolute;
-  padding: 7px;
   right: 0; 
   top: 0;
+  padding: 7px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -435,8 +439,8 @@ img {
 .form-field {
   display: block;
   width: 100%;
-  box-sizing: border-box;
   padding: 8px 12px;
+  box-sizing: border-box;
   background-color: var(--basic-neutral-grey);
   font-size: 14px;
   border: none;
@@ -471,8 +475,8 @@ img {
   grid-row-start: 5;
   height: 58px;
   width: 456px;
-  box-sizing: border-box;
   margin: 0 auto;
+  box-sizing: border-box;  
 }
 /*END Поля в попапе */
 
@@ -514,9 +518,13 @@ input[type=number]::-webkit-outer-spin-button {
 /*END Кнопка найти в попапе и иконки соцсетей */
 
 /*START Карта */
-.map {
+.map .map-interactive {
   position: absolute;
   z-index: 2;
+  transform: translate(-50%, 0);
+  width: 1199px;
+  height: 594px;
+  border: none;
 }
 /* END Карта */
 
@@ -897,10 +905,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .soc-icon {
   display: block;
-  box-sizing: border-box;
   width: 46px;
   height: 48px;
   padding: 12px;
+  box-sizing: border-box;
   background-color: var(--basic-blue);
 }
 

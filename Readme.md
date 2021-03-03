@@ -16,7 +16,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
 
-#### 2. Создайте форк/
+#### 2. Создайте форк/..
 
 [Откройте мастер-репозиторий](https://github.com/htmlacademy-htmlcss/1489759-sedona-30) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
 

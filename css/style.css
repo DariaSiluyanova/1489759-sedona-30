@@ -104,7 +104,7 @@ img {
   grid-area: header;
   position: relative;
   text-align: left;
-  color: var(--basic-black);  
+  color: var(--basic-black);
   background-color: transparent;
   box-sizing: border-box;
 }
@@ -116,14 +116,14 @@ img {
   padding: 0px;
   line-height: 26px;
   list-style-type: none;
-  color: var(--basic-black);    
+  color: var(--basic-black);
 }
 
 /* Логотип */
 .main-header-logo {
   position: absolute;
-  left: 50%; 
-  transform: translate(-50%, 0); 
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .nav-item {
@@ -139,11 +139,11 @@ img {
 
 .nav-item:nth-child(2) {
   grid-column: 2/3;
-  text-align: left;  
+  text-align: left;
 }
 
 .nav-item:nth-child(3) {
-  grid-column: 3/4; 
+  grid-column: 3/4;
   text-align: right;
 }
 
@@ -178,7 +178,7 @@ img {
   height: 509px;
   width: 1200px;
   background-color: var(--basic-blue);
-  background: 
+  background:
   no-repeat url(../img/slicer.svg) bottom,
   no-repeat url(../img/welcome-words.svg) center,
   url(../img/bg-welcome.jpg) center;
@@ -204,7 +204,7 @@ img {
 }
 
 .features-list {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(3, 400px);
   margin: auto;
   padding: 0px;
@@ -213,7 +213,7 @@ img {
   list-style-type: none;
 }
 
-.feature-item, 
+.feature-item,
 .feature-item-add {
   font-size: 21px;
   color: var(--basic-black);
@@ -223,6 +223,8 @@ img {
   grid-column: 2/4;
   width: 800px;
   height: 256px;
+  background-image: url(../img/bg-feature-1.jpg);
+  background-color: var(--basic-light-grey);
 }
 
 .image-real-town-1 {
@@ -231,8 +233,10 @@ img {
 
 .image-devil-brige {
   grid-column: 1/3;
-  width: 100%;
-  min-height: 100%;
+  width: 800px;
+  height: 256px;
+  background-image: url(../img/bg-feature-2.jpg);
+  background-color: var(--basic-light-grey);
 }
 
 .image-devil-brige-1 {
@@ -263,7 +267,7 @@ img {
 /*END Настоящий городок + Там есть мост дьявола */
 
 /* Настоящий городок */
-.card-1 { 
+.card-1 {
   margin: 0px;
   padding: 47px 130px 25px;
 }
@@ -281,7 +285,7 @@ img {
   height: 332px;
 }
 
-.feature-item-add {  
+.feature-item-add {
   margin-top: 160px;
   padding: 0px;
 }
@@ -308,13 +312,13 @@ img {
 }
 
 .from-3 .number {
-  margin: 0px;  
+  margin: 0px;
   padding-top: 23px;
   padding-bottom: 25px;
 }
 
 .from-3 .feature-tagline {
-  padding-top: 10px;  
+  padding-top: 10px;
 }
 /* END Причины посещения */
 
@@ -378,7 +382,7 @@ img {
   display: block;
   width: 100%;
   font-size: 21px;
-  line-height: 26px;  
+  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -410,9 +414,9 @@ img {
 
 .button-calendar {
   position: absolute;
-  right: 0; 
+  right: 0;
   top: 0;
-  padding: 7px;
+  padding: 3px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -442,8 +446,19 @@ img {
   padding: 8px 12px;
   box-sizing: border-box;
   background-color: var(--basic-neutral-grey);
-  font-size: 14px;
   border: none;
+}
+
+.form-field[type="text"]::placeholder {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.form-field[type="number"]::placeholder {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--basic-black);
 }
 
 .field-half {
@@ -476,15 +491,11 @@ img {
   height: 58px;
   width: 456px;
   margin: 0 auto;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 /*END Поля в попапе */
 
-/*START Popup dates*/
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;  
-}
-
+/*START Popup number-hidden-arrows*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -494,7 +505,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*END Форма поиска гостиницы */
 
-/*START Кнопка найти в попапе и иконки соцсетей */
+/*START Кнопка "найти" в попапе и иконки соцсетей */
 .search,
 .social-button {
   background-color: var(--basic-blue);
@@ -545,7 +556,7 @@ input[type=number]::-webkit-outer-spin-button {
 .filter-field {
   padding: 0px;
   margin-left: 70px;
-  border: none;  
+  border: none;
   box-sizing: border-box;
 }
 
@@ -692,7 +703,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px;  
+  width: 250px;
   margin-right: 30px;
 }
 /* END Найдено: 3 и сортировка*/
@@ -765,7 +776,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* START Каталог */
 .more {
-  font: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .info-hotels {

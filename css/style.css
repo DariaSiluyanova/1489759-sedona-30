@@ -396,13 +396,14 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-mud);
   border: none;
+  outline: none;
 }
 
 .button:hover {
   background-color: var(--aiming-mud);
 }
 
-.button:focus {
+.button:active {
   color: var(--light-white);
   background-color: var(--push-mud);
 }
@@ -457,8 +458,8 @@ img {
   width: 100%;
   padding: 8px 12px;
   box-sizing: border-box;
-  background-color: var(--basic-neutral-grey);
   border: none;
+  background-color: var(--basic-neutral-grey);
 }
 
 .form-field[type="text"]::placeholder {
@@ -497,9 +498,15 @@ img {
   background-color: inherit;
 }
 
-.form-input>.button-calendar:active .icon-popup,
-.form-input-half .icon-minus:active .icon-popup,
-.form-input-half .icon-plus:active .icon-popup {
+.form-input>.button-calendar:focus,
+.form-input-half .icon-minus:focus,
+.form-input-half .icon-plus:focus {
+  outline: none;
+}
+
+.form-input>.button-calendar:focus .icon-popup,
+.form-input-half .icon-minus:focus .icon-popup,
+.form-input-half .icon-plus:focus .icon-popup {
   fill: var(--basic-blue);
   background-color: inherit;
 }
@@ -937,7 +944,8 @@ img {
 
 .footer-part {
   width: 300px;
-  margin: 20px 0px;
+  margin-top: 15px;
+  margin-bottom: 27px;
 }
 
 .background-footer {
@@ -952,8 +960,11 @@ img {
 }
 
 .hashtag {
-  padding: 0px;
-  margin-top: 0px;
+  margin: 5px 0px 10px 80px;
+}
+
+.link-tel {
+  margin-left: 70px;
 }
 
 .footer-part-tel {
@@ -982,19 +993,19 @@ img {
 
 .copy-box {
   display: flex;
-  margin: 0 auto;
+  margin: 10px 0px 0px 15px;
 }
 
 .copy-info {
   display: inline-block;
-  padding-top: 0px;
+  padding: 0px;
   font-size: 14px;
   line-height: 26px;
-  margin-right: 5px;
+  margin: 15px 5px 0px 0px;
 }
 
 .copy-link {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .copy-link:hover .svg {

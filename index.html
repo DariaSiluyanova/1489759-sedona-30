@@ -10,7 +10,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap&subset=cirillic,latin">
   </head>
 
   <body class="page-body container">
@@ -143,22 +143,30 @@
           <label class="label" for="adult">Взрослые:</label>
           <div class="form-input-half">
             <input class="form-field field-half" type="number" id="adult" min="0" max="20" name="adult" placeholder="2">
-            <svg class="icon-minus" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="icon-minus">
+              <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect class="icon-popup" width="12" height="3" fill="#a9a9a9"/>
-            </svg>
-            <svg class="icon-plus" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              </svg>
+            </button>
+            <button class="icon-plus">
+              <svg  width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="icon-popup" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#a9a9a9"/>
-            </svg>
+              </svg>
+            </button>
           </div>
           <label class="label label-child" for="child">Дети:</label>
           <div class="form-input-half">
             <input class="form-field field-half" type="number" id="child" min="0" max="20" name="children" placeholder="0">
-            <svg class="icon-minus" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="icon-minus">
+              <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect class="icon-popup" width="12" height="3" fill="#a9a9a9"/>
-            </svg>
-            <svg class="icon-plus" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              </svg>
+            </button>
+            <button class="icon-plus">
+              <svg  width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="icon-popup" fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#a9a9a9"/>
-            </svg>
+              </svg>
+            </button>
           </div>
           <input type="submit" value="Найти" class="button search search-layout">
         </form>

@@ -437,15 +437,19 @@ img {
 .icon-minus {
   position: absolute;
   top: 40%;
-  left: 10px;
+  left: 5px;
   transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
 }
 
 .icon-plus {
   position: absolute;
-  top: 40%;
-  right: 10px;
+  top: 50%;
+  right: 5px;
   transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
 }
 
 .form-field {
@@ -480,17 +484,24 @@ img {
 
 .form-field:focus {
   background-color: var(--basic-white);
+  box-shadow: 
+  1px 1px 0 var(--push-neutral-gray) inset,
+  -1px -1px 0 var(--push-neutral-gray) inset;
   outline: none;
 }
 
-.form-input:hover .icon-popup,
-.form-input-half:hover .icon-popup {
+.form-input>.button-calendar:hover .icon-popup,
+.form-input-half .icon-minus:hover .icon-popup,
+.form-input-half .icon-plus:hover .icon-popup {
   fill: var(--basic-black);
+  background-color: inherit;
 }
 
-.form-input:active .icon-popup,
-.form-input-half .icon-popup:active {
+.form-input>.button-calendar:active .icon-popup,
+.form-input-half .icon-minus:active .icon-popup,
+.form-input-half .icon-plus:active .icon-popup {
   fill: var(--basic-blue);
+  background-color: inherit;
 }
 /* Кнопка Найти */
 .search-layout {
@@ -506,10 +517,14 @@ img {
 /*END Поля в попапе */
 
 /*START Popup number-hidden-arrows*/
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.field-half[type=number]::-webkit-inner-spin-button,
+.field-half[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin:0;
+}
+
+.field-half[type=number] {
+  -moz-appearance:textfield;
 }
 /*END Popup dates*/
 
@@ -810,10 +825,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: var(--basic-extra-dark-grey);
 }
 
-.raiting{
-  color: var(--basic-medium-grey);
-}
-
 .catalog {
   display: grid;
   grid-template-columns: 135px 1fr;
@@ -871,8 +882,9 @@ input[type=number]::-webkit-outer-spin-button {
   grid-column-start: 3;
   grid-row: 3/4;
   justify-self: end;
-  height: fit-content;
+  align-self: center;
   padding: 2px;
+  color: var(--basic-medium-grey);
   background-color: var(--basic-neutral-grey);
 }
 
@@ -985,11 +997,11 @@ input[type=number]::-webkit-outer-spin-button {
   padding-top: 10px;
 }
 
-.copy-link .svg:hover {
+.copy-link:hover .svg {
   fill: var(--basic-blue);
 }
 
-.copy-link .svg:active {
+.copy-link:active .svg {
   fill: var(--push-light-gray);
 }
 /*END Подвал */

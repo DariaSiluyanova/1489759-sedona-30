@@ -310,6 +310,10 @@ img {
 
 /* Преимущества 3-6 */
 
+.from-3 {
+  background-color: var(--push-neutral-gray);
+}
+
 .from-3 .feature-item {
   display: inline-block;
   width: 150px;

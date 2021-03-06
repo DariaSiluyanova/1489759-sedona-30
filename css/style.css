@@ -38,7 +38,7 @@
 body {
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
@@ -252,7 +252,7 @@ img {
 .feature-tagline {
   width: auto;
   margin: 0px;
-  padding: 23px 30px 54px;
+  padding: 23px 40px 54px;
 }
 
 /*START Настоящий городок + Там есть мост дьявола */
@@ -268,14 +268,14 @@ img {
 
 .addition .number {
   margin: 0px;
-  padding: 0px 10px 0px;
+  padding: 0px 12px 0px;
 }
 /*END Настоящий городок + Там есть мост дьявола */
 
 /* Настоящий городок */
 .card-1 {
   margin: 0px;
-  padding: 47px 130px 25px;
+  padding: 47px 130px 28px;
 }
 
 /* Там есть мост дьявола */
@@ -299,13 +299,13 @@ img {
 .tagline-no-num {
   width: auto;
   padding: 0px;
-  margin: 25px 45px 82px 35px;
+  margin: 27px 50px 82px;
 }
 
 .icon-feature {
   position: absolute;
   bottom: 200px;
-  left: 40%;
+  left: 42%;
 }
 
 /* Преимущества 3-6 */
@@ -336,7 +336,7 @@ img {
 
 .appointment-info {
   padding: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   font-size: 30px;
   font-weight: 700;
   color: var(--basic-black);
@@ -349,6 +349,8 @@ img {
 .label {
   display: block;
   text-align: left;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 /*END Заинтересовались? */
@@ -424,8 +426,8 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  padding-top: 0px;
-  padding-right: 6px;
+  padding-top: 7px;
+  padding-right: 8px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -456,7 +458,7 @@ img {
 .form-field {
   display: block;
   width: 100%;
-  padding: 8px 12px;
+  padding: 12px;
   box-sizing: border-box;
   border: none;
   background-color: var(--basic-neutral-grey);
@@ -517,7 +519,7 @@ img {
   grid-row-start: 4;
   height: 58px;
   width: 456px;
-  margin-top: 28px;
+  margin-top: 18px;
   padding: 0px;
   box-sizing: border-box;
 }
@@ -960,11 +962,11 @@ img {
 }
 
 .hashtag {
-  margin: 5px 0px 10px 80px;
+  margin: 6px 0px 9px 75px;
 }
 
 .link-tel {
-  margin-left: 70px;
+  margin-left: 74px;
 }
 
 .footer-part-tel {
@@ -977,7 +979,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 151px;
-  padding: 10px 0px;
+  padding: 13px 0px;
   margin: 0 auto;
   list-style-type: none;
 }
@@ -1005,7 +1007,8 @@ img {
 }
 
 .copy-link {
-  padding-top: 5px;
+  padding-top: 7px;
+  padding-left: 5px;
 }
 
 .copy-link:hover .svg {

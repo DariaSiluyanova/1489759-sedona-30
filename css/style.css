@@ -305,7 +305,7 @@ img {
 .icon-feature {
   position: absolute;
   bottom: 200px;
-  left: 42%;
+  left: 41%;
 }
 
 /* Преимущества 3-6 */
@@ -353,7 +353,7 @@ img {
 .label {
   display: block;
   text-align: left;
-  margin-top: 6px;
+  margin-top: 5px;
   margin-bottom: 6px;
 }
 
@@ -430,7 +430,7 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  padding-top: 7px;
+  padding-top: 6px;
   padding-right: 8px;
   border: none;
   outline: none;
@@ -443,8 +443,8 @@ img {
 
 .icon-minus {
   position: absolute;
-  top: 40%;
-  left: 5px;
+  top: 34%;
+  left: 7px;
   transform: translateY(-50%);
   border: none;
   background-color: transparent;
@@ -452,8 +452,8 @@ img {
 
 .icon-plus {
   position: absolute;
-  top: 50%;
-  right: 5px;
+  top: 43%;
+  right: 8px;
   transform: translateY(-50%);
   border: none;
   background-color: transparent;
@@ -462,19 +462,13 @@ img {
 .form-field {
   display: block;
   width: 100%;
-  padding: 12px;
+  padding: 7px 12px 15px;
   box-sizing: border-box;
   border: none;
   background-color: var(--basic-neutral-grey);
 }
 
-.form-field[type="text"]::placeholder {
-  padding: 0px;
-  font-size: 14px;
-  font-weight: bold;
-  color: var(--basic-black);
-}
-
+.form-field[type="text"]::placeholder,
 .form-field[type="number"]::placeholder {
   font-size: 14px;
   font-weight: bold;
@@ -490,29 +484,22 @@ img {
 }
 
 .form-field:focus {
-  background-color: var(--basic-white);
-  box-shadow: 
-  1px 1px 0 var(--push-neutral-gray) inset,
-  -1px -1px 0 var(--push-neutral-gray) inset;
+  padding: 5px 10px 13px;
   outline: none;
+  border: 2px solid var(--push-neutral-gray);
+  background-color: var(--basic-white);
 }
 
-.form-input>.button-calendar:hover .icon-popup,
-.form-input-half .icon-minus:hover .icon-popup,
-.form-input-half .icon-plus:hover .icon-popup {
+.button-calendar:hover .icon-popup,
+.icon-minus:hover .icon-popup,
+.icon-plus:hover .icon-popup {
   fill: var(--basic-black);
   background-color: inherit;
 }
 
-.form-input>.button-calendar:focus,
-.form-input-half .icon-minus:focus,
-.form-input-half .icon-plus:focus {
-  outline: none;
-}
-
-.form-input>.button-calendar:focus .icon-popup,
-.form-input-half .icon-minus:focus .icon-popup,
-.form-input-half .icon-plus:focus .icon-popup {
+.button-calendar:active .icon-popup,
+.icon-minus:active .icon-popup,
+.icon-plus:active .icon-popup {
   fill: var(--basic-blue);
   background-color: inherit;
 }
@@ -523,7 +510,7 @@ img {
   grid-row-start: 4;
   height: 58px;
   width: 456px;
-  margin-top: 18px;
+  margin-top: 20px;
   padding: 0px;
   box-sizing: border-box;
 }
@@ -540,8 +527,8 @@ img {
   -moz-appearance:textfield;
 }
 /*END Popup dates*/
-
 /*END Форма поиска гостиницы */
+
 
 /*START Кнопка "найти" в попапе и иконки соцсетей */
 .search,
@@ -962,14 +949,14 @@ img {
 
 .map-substrate {
   width: 1199px;
-  height: 480px;
+  height: 473px;
   background-color: var(--basic-dark-grey);
   z-index: 1;
 }
 
 .footer-part {
   width: 300px;
-  margin-top: 15px;
+  margin-top: 23px;
   margin-bottom: 27px;
 }
 
@@ -985,7 +972,7 @@ img {
 }
 
 .hashtag {
-  margin: 6px 0px 9px 75px;
+  margin: 12px 0px 9px 75px;
 }
 
 .link-tel {

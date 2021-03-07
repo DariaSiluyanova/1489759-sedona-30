@@ -598,7 +598,7 @@ img {
 
 .filter-field:last-child {
   width: 300px;
-  margin-right: 75px;
+  margin-right: 74px;
   margin-bottom: 18px;
   margin-left: auto;
 }
@@ -713,16 +713,16 @@ img {
 .cost-item:first-child:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 50%;
   width: 2px;
-  height: 21px;
+  height: 20px;
   background-color: var(--basic-white);
 }
 
 /* Кнопка Показать */
 .button-show {
-  margin: 12px 20px;
+  margin: 10px 21px 14px;
   padding: 5px 32px;
   transform: translate(50%, 0);
   font-size: 14px;
@@ -745,8 +745,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px;
-  margin-right: 27px;
+  width: 240px;
+  margin-right: 40px;
 }
 /* END Найдено: 3 и сортировка*/
 
@@ -756,6 +756,10 @@ img {
   font-size: 21px;
   line-height: 26px;
   margin: 0px;
+}
+
+.info .hotels-align {
+  margin-left: 5px;
 }
 
 .flex-breadcrumbs {
@@ -775,10 +779,11 @@ img {
 }
 
 .arrows {
-  margin: 5px 5px 0px auto;
+  margin: 5px 0px 0px auto;
 }
 
 .breadcrumbs-title {
+  font-size: 12px;
   color: var(--basic-black);
 }
 
@@ -789,6 +794,10 @@ img {
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   transition: all 0.1s;
+}
+
+.tiny-sort:first-of-type {
+  margin-right: 8px;
 }
 
 .breadcrumbs-item:hover,
@@ -856,16 +865,13 @@ img {
   padding-top:4px;
 }
 
-.catalog:last-of-type {
-  padding-bottom: 28px;
-}
-
 .card-hotel {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: auto auto 1fr;
   grid-gap: 3px;
   min-height: 90px;
+  padding-bottom: 3px;
   box-sizing: border-box;
 }
 

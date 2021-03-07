@@ -352,9 +352,8 @@ img {
 
 .label {
   display: block;
+  align-self: center;
   text-align: left;
-  margin-top: 5px;
-  margin-bottom: 6px;
 }
 
 /*END Заинтересовались? */
@@ -370,7 +369,6 @@ img {
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: top;
   width: 568px;
   min-height: 395px;
   row-gap: 30px;
@@ -402,7 +400,6 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-mud);
   border: none;
-  outline: none;
 }
 
 .button:hover {
@@ -416,6 +413,17 @@ img {
 /*END Стиль кнопок*/
 
 /*START Поля в попапе */
+.form-field {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  box-sizing: border-box;  
+  border: 2px solid var(--basic-neutral-grey);
+  background-color: var(--basic-neutral-grey);
+}
+
 .button-layout {
   margin-top: 44px;
   margin-bottom: 0px;
@@ -428,12 +436,9 @@ img {
 
 .button-calendar {
   position: absolute;
-  right: 0;
-  top: 0;
-  padding-top: 6px;
-  padding-right: 8px;
+  right: 5px;
+  top: 5px;
   border: none;
-  outline: none;
   background-color: transparent;
 }
 
@@ -443,8 +448,8 @@ img {
 
 .icon-minus {
   position: absolute;
-  top: 34%;
-  left: 7px;
+  top: 15px;
+  left: 6px;
   transform: translateY(-50%);
   border: none;
   background-color: transparent;
@@ -452,20 +457,11 @@ img {
 
 .icon-plus {
   position: absolute;
-  top: 43%;
-  right: 8px;
+  top: 19px;
+  right: 9px;
   transform: translateY(-50%);
   border: none;
   background-color: transparent;
-}
-
-.form-field {
-  display: block;
-  width: 100%;
-  padding: 7px 12px 15px;
-  box-sizing: border-box;
-  border: none;
-  background-color: var(--basic-neutral-grey);
 }
 
 .form-field[type="text"]::placeholder,
@@ -484,10 +480,9 @@ img {
 }
 
 .form-field:focus {
-  padding: 5px 10px 13px;
   outline: none;
-  border: 2px solid var(--push-neutral-gray);
   background-color: var(--basic-white);
+  border-color: var(--push-neutral-gray);
 }
 
 .button-calendar:hover .icon-popup,
@@ -507,10 +502,9 @@ img {
 .search-layout {
   display: block;
   grid-column: 1/5;
-  grid-row-start: 4;
+  grid-row-start: 5;
   height: 58px;
   width: 456px;
-  margin-top: 20px;
   padding: 0px;
   box-sizing: border-box;
 }
@@ -531,18 +525,18 @@ img {
 
 
 /*START Кнопка "найти" в попапе и иконки соцсетей */
-.search,
+.form .search,
 .social-button {
   background-color: var(--basic-blue);
 }
 
-.search:hover,
+.form .search:hover,
 .social-button:hover {
   background-color: var(--aiming-blue);
 }
 
-.search:focus,
-.social-button:focus {
+.form .search:active,
+.social-button:active {
   color: var(--light-white);
   background-color: var(--push-blue);
 }

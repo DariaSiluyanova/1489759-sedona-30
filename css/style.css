@@ -630,14 +630,14 @@ img {
   display: block;
 }
 
-.list-item .filter-item+.filter-label::before {
+.list-item .filter-item + .filter-label::before {
   content: url(../img/icon-checkbox.svg);
   position: absolute;
   top: 0;
   left: -40px;
 }
 
-.list-item .filter-item:checked+.filter-label::before {
+.list-item .filter-item:checked + .filter-label::before {
   content: url(../img/icon-checked.svg);
   top: 0px;
   left: -40px;
@@ -645,19 +645,10 @@ img {
   background: url(../img/icon-checkbox-checked.svg) no-repeat;
 }
 
-.filter-item:disabled+.filter-label::before {
-  content: url(../img/checkbox-off.svg);
-  position: absolute;
-  top: 0;
-  left: -40px;
+.filter-item:disabled + .filter-label {
 }
 
-.filter-item:checked:disabled+.filter-label::before {
-  content: url(../img/icon-checkbox-checked-off.svg);
-  top: 0px;
-  left: -40px;
-  padding: 2px 0px 0px 3px;
-  background: url(../img/icon-checkbox-checked-box-off.svg) no-repeat;
+.filter-item:checked:disabled + .filter-label {
 }
 
 /* Стоимость в сутки */
@@ -821,6 +812,7 @@ img {
 .breadcrumbs-item:active,
 .tiny-sort:active {
   color: var(--basic-black);
+  text-decoration-line: none;
 }
 
 .input-breadcrumbs:checked+.breadcrumbs-item {
@@ -891,6 +883,15 @@ img {
 .hotels {
   grid-column: 1/3;
   margin: 0px;
+}
+
+.card-hotel-link:hover {
+  color: var(--basic-blue);
+}
+
+.card-hotel-link:active {
+  color: var(--basic-black);
+  opacity: .3;
 }
 
 .info-hotels {

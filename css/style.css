@@ -570,14 +570,16 @@ img {
 
 .filter {
   display: flex;
-  padding: 0px;
+  min-height: 150px;
+  padding: 25px 0px 32px 0px;
   margin: 0px;
   color: var(--basic-white);
   background: no-repeat url("../img/bg-inner-page.jpg") 100%;
+  background-size: cover;
 }
 
 .filter-field {
-  padding: 0px;
+  padding: 0px 0px 0px 0px;
   margin: 0px;
   border: none;
   box-sizing: border-box;
@@ -596,13 +598,13 @@ img {
 .filter-field:last-child {
   width: 300px;
   margin-right: 74px;
-  margin-bottom: 18px;
+  margin-bottom: 0px;
   margin-left: auto;
 }
 
 .title {
   display: block;
-  margin: 25px 0px;
+  margin: 0px 0px 25px 0px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -748,7 +750,7 @@ img {
 
 /* Кнопка Показать */
 .button-show {
-  margin: 10px 21px 14px;
+  margin: 10px 21px 0px;
   padding: 5px 32px;
   transform: translate(50%, 0);
   font-size: 14px;

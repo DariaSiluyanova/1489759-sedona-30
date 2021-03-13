@@ -12,7 +12,7 @@
   --basic-diff-gray: #eeeeee;
   --modal-shadow: rgba(0, 1, 1, 0.15);
   --content-shadow: rgba(0, 1, 1, 0.2);
-
+ 
   /*Цвета в футере*/
   --basic-dark: #231f20;
 
@@ -439,8 +439,8 @@ img {
   position: absolute;
   right: 5px;
   top: 5px;
-  border: none;
   background-color: transparent;
+  border: none;
 }
 
 .form-input-half {
@@ -452,8 +452,8 @@ img {
   top: 15px;
   left: 6px;
   transform: translateY(-50%);
-  border: none;
   background-color: transparent;
+  border: none;
 }
 
 .icon-plus {
@@ -461,8 +461,8 @@ img {
   top: 19px;
   right: 9px;
   transform: translateY(-50%);
-  border: none;
   background-color: transparent;
+  border: none;
 }
 
 .form-field[type="text"]::placeholder,
@@ -752,10 +752,10 @@ img {
 .button-show {
   margin: 10px 21px 0px;
   padding: 5px 32px;
-  transform: translate(50%, 0);
+  transform: translate(50%, 0);  
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: inherit;
@@ -992,10 +992,10 @@ img {
 }
 
 .map-substrate {
+  z-index: 1;
   width: 1199px;
   height: 473px;
   background-color: var(--basic-dark-grey);
-  z-index: 1;
 }
 
 .footer-part {
@@ -1054,10 +1054,10 @@ img {
 
 .copy-info {
   display: inline-block;
+  margin: 15px 5px 0px 0px;
   padding: 0px;
   font-size: 14px;
   line-height: 26px;
-  margin: 15px 5px 0px 0px;
 }
 
 .copy-link {

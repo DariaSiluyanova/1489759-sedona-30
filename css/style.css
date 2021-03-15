@@ -12,7 +12,7 @@
   --basic-diff-gray: #eeeeee;
   --modal-shadow: rgba(0, 1, 1, 0.15);
   --content-shadow: rgba(0, 1, 1, 0.2);
- 
+
   /*Цвета в футере*/
   --basic-dark: #231f20;
 
@@ -293,8 +293,8 @@ img {
 /* Жилье, еда, сувениры */
 .feature-list-card {
   position: relative;
-  padding-top: 0px;
   min-height: 332px;
+  padding-top: 0px;
 }
 
 .feature-item-add {
@@ -757,7 +757,7 @@ img {
 .button-show {
   margin: 10px 21px 0px;
   padding: 5px 32px;
-  transform: translate(50%, 0);  
+  transform: translate(50%, 0);
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;

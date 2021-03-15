@@ -132,7 +132,7 @@ img {
 }
 
 /* Навигационная цепочка */
-.nav-item:nth-child(4n+1) {
+.nav-item:nth-child(4n + 1) {
   grid-column: 1/2;
   margin-left: 70px;
   text-align: left;
@@ -202,6 +202,10 @@ img {
   margin-bottom: 50px;
   font: inherit;
   line-height: 26px;
+}
+
+.features {
+  margin-bottom: 70px;
 }
 
 .features-list {
@@ -281,31 +285,32 @@ img {
 
 /* Там есть мост дьявола */
 .card-2 {
-  width: 173px;
+  max-width: 174px;
   margin: 0px;
-  padding: 50px 115px 23px;
+  padding: 50px 110px 23px;
 }
 
 /* Жилье, еда, сувениры */
 .feature-list-card {
   position: relative;
-  height: 332px;
+  padding-top: 0px;
+  min-height: 332px;
 }
 
 .feature-item-add {
-  margin-top: 160px;
+  margin-top: 150px;
   padding: 0px;
 }
 
 .tagline-no-num {
   width: auto;
   padding: 0px;
-  margin: 27px 50px 82px;
+  margin: 27px 50px 0px;
 }
 
 .icon-feature {
   position: absolute;
-  bottom: 200px;
+  padding-top: 55px;
   left: 41%;
 }
 
@@ -335,7 +340,8 @@ img {
 
 /*START Заинтересовались? */
 .appointment {
-  margin-top: 58px;
+  margin-top: 0px;
+  margin-bottom: 50px;
   line-height: 24px;
 }
 
@@ -426,8 +432,7 @@ img {
 }
 
 .button-layout {
-  margin-top: 44px;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .button-main-page {
@@ -512,13 +517,13 @@ img {
 /*END Поля в попапе */
 
 /*START Popup number-hidden-arrows*/
-.field-half[type=number]::-webkit-inner-spin-button,
-.field-half[type=number]::-webkit-outer-spin-button {
+.field-half[type="number"]::-webkit-inner-spin-button,
+.field-half[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin:0;
 }
 
-.field-half[type=number] {
+.field-half[type="number"] {
   -moz-appearance:textfield;
 }
 /*END Popup dates*/
@@ -837,7 +842,7 @@ img {
   text-decoration-line: none;
 }
 
-.input-breadcrumbs:checked+.breadcrumbs-item {
+.input-breadcrumbs:checked + .breadcrumbs-item {
   text-decoration: none;
   color: var(--basic-blue);
 }
@@ -846,8 +851,8 @@ img {
   fill: var(--basic-black);
 }
 
-.input-sort:active+.svg-arrows .svg-sort,
-.input-sort:checked+.svg-arrows .svg-sort {
+.input-sort:active + .svg-arrows .svg-sort,
+.input-sort:checked + .svg-arrows .svg-sort {
   fill: var(--basic-blue);
 }
 /* END Навигационная цепочка */
@@ -998,8 +1003,8 @@ img {
 
 .footer-part {
   width: 300px;
-  margin-top: 23px;
-  margin-bottom: 27px;
+  margin: 0px;
+  padding: 8px 0px 20px 0px;
 }
 
 .background-footer {
@@ -1009,6 +1014,7 @@ img {
   z-index: 10;
   width: 100%;
   margin: 0 auto;
+  padding-top: 15px;
   padding-bottom: 5px;
   background-color: var(--basic-white);
 }
@@ -1023,7 +1029,7 @@ img {
 
 .footer-part-tel {
   margin: 0px;
-  padding: 10px 0px;
+  padding: 0px;
 }
 
 .socials-list {

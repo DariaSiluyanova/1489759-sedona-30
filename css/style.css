@@ -392,8 +392,8 @@ img {
 }
 
 .form-input {
-  grid-column: 2/5;
   position: relative;
+  grid-column: 2/5;
 }
 
 .label-child {
@@ -582,7 +582,7 @@ img {
 .filter {
   display: flex;
   min-height: 150px;
-  padding: 25px 0px 32px 0px;
+  padding: 25px 0px 32px;
   margin: 0px;
   color: var(--basic-white);
   background: no-repeat url("../img/bg-inner-page.jpg") 100%;
@@ -591,7 +591,7 @@ img {
 }
 
 .filter-field {
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
   margin: 0px;
   border: none;
   box-sizing: border-box;
@@ -616,7 +616,7 @@ img {
 
 .title {
   display: block;
-  margin: 0px 0px 25px 0px;
+  margin: 0px 0px 25px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -642,14 +642,14 @@ img {
 /* Чекбоксы */
 
 .list-item {
-  display: block;
   position: relative;
+  display: block;
 }
 
 .list-item-icon-checkbox {
+  position: absolute;
   display: inline-block;
   vertical-align: top;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -672,18 +672,18 @@ img {
 }
 
 .filter-item[type="checkbox"]:checked + .filter-label > .list-item-icon-checkbox-checked {
+  position: absolute;
   display: inline-block;
   vertical-align: top;
-  position: absolute;
   z-index: 11;
   top: 0;
   left: 0;
 }
 
-.filter-item[type="checkbox"]:checked + .filter-label > .list-item-icon-checked {
+.filter-item[type="checkbox"]:checked + .filter-label > .list-item-icon-checked {  
+  position: absolute;
   display: inline-block;
   vertical-align: top;
-  position: absolute;
   z-index: 11;
   top: 1px;
   left: 4px;

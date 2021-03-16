@@ -820,8 +820,8 @@ img {
 
 .breadcrumbs {
   display: flex;
-  justify-content: space-between;
-  width: 238px;
+  flex-wrap: wrap;
+  min-width: 238px;
   font-size: 12px;
   line-height: 18px;
   color: var(--light-black);
@@ -837,12 +837,17 @@ img {
 }
 
 .breadcrumbs-item {
+  padding-right: 35px;
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-color: inherit;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
   transition: all 0.1s;
+}
+
+.breadcrumbs-item:last-of-type {
+  padding-right: 0px;
 }
 
 .tiny-sort:first-of-type {
